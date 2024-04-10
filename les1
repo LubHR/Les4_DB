@@ -1,0 +1,39 @@
+use liubomyr;
+
+select * from cars;
+
+select model,year from cars where year > 2000;
+
+select model,year from cars where year < 2015;
+
+select model,year from cars where year in(2008, 2009, 2010);
+
+select model,year from cars where year not in(2008, 2009, 2010);
+
+select model,year,price from cars where year=price;
+
+select model,year from cars where model='bmw' and year < 2014;
+
+select model,year from cars where model='audi' and year > 2014;
+
+select model,year from cars limit 5;
+
+select model,id from cars order by id desc limit 5;
+
+select avg(price) as avg from cars where model='KIA';
+
+select avg(price),model as avg from cars group by model;
+
+select count(model),model from cars group by model;
+
+select count(model) as countModel,model from cars group by model;
+
+select count(model) as countModel,model from cars group by model having countModel>10;
+
+select model from cars where model like '_a_a_';
+
+select model from cars where length(model) > 8;
+
+select model from cars where price > (select avg(price) as AVGmodel from cars);
+
+# --------------------------------
