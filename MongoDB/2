@@ -1,0 +1,162 @@
+// 1) Знайти всіх дітей в яких сердня оцінка 4.2
+// 2) Знайди всіх дітей з 1 класу
+// 3) Знайти всіх дітей які вивчають фізику
+// 4) Знайти всіх дітей, батьки яких працюють в науці ( scientist )
+// 5) Знайти дітей, в яких середня оцінка більша за 4
+// 6) Знайти найкращого учня
+// 7) Знайти найгіршого учня
+// 8) Знайти топ 3 учнів
+// 9) Знайти середній бал по школі
+
+db.students.find()
+
+db.students.aggregate([
+    {
+        $match: {
+            'avgScore': 4.2
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $match: {
+            'class': 1
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $match: {
+            'lessons': 'physics'
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $match: {
+            'parents.profession': 'scientist'
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $match: {
+            'avgScore': {$gte: 4}
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $group: {
+            _id: '$name',
+            maxrage: {$max: '$avgScore'}
+        }
+    },
+    {
+        $match: {
+            maxrage: {$gte: 5}
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $group: {
+            _id: '$name',
+            minrage: {$min: '$avgScore'}
+        }
+    },
+    {
+        $match: {
+            minrage: {$lt: 2.20}
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $group: {
+            _id: '$name',
+            maxrage: {$max: '$avgScore'}
+        }
+    },
+    {
+        $match: {
+            maxrage: {$gte: 4.9}
+        }
+    },
+    {
+        $limit: 3
+    }
+])
+
+db.students.aggregate([
+    {
+        $group: {
+            _id: '$class',
+            seredniybal: {$avg: '$avgScore'}
+        }
+    }
+])
+
+// 10) Знайти середній бал дітей які вивчають математику або фізику
+// 11) Знайти середній бал по 2 класі
+// 12) Знайти дітей з не повною сім'єю
+// 13) Знайти батьків які не працюють
+// 14) Вигнати дітей, які мають середній бал менше ніж 2.5
+// 15) Дітям, батьки яких працюють в освіті ( teacher ) поставити 5
+// 16) Знайти дітей які вчаться в початковій школі (до 5 класу) і вивчають фізику ( physics )
+// 17) Знайти найуспішніший клас
+
+db.students.find()
+
+db.students.aggregate([
+    {
+        $match: {
+            'lessons': {$in: ['mathematics', 'physics']}
+        }
+    },
+    {
+        $group: {
+            _id: '$lessons',
+            avgBal: {$avg: '$avgScore'}
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $match: {
+            'class': 2
+        }
+    },
+    {
+        $group: {
+            _id: '$class',
+            avginclass2: {$avg: '$avgScore'}
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $match: {
+            'parents': {$size: 1}
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $match: {
+            "parents.profession": { $exists: false }
+        }
+    }
+])
+
+

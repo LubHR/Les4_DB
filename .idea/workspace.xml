@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3cc8081-57f4-48f4-808b-2e4922394a98" name="Changes" comment="les1.1">
-      <change afterPath="$PROJECT_DIR$/MongoDB/1" afterDir="false" />
+    <list default="true" id="e3cc8081-57f4-48f4-808b-2e4922394a98" name="Changes" comment="les2.1">
+      <change afterPath="$PROJECT_DIR$/MongoDB/2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/adcb583b-3e10-419d-a97a-7bb7c21f8d3a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/adcb583b-3e10-419d-a97a-7bb7c21f8d3a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0deb9a2-459e-4d44-8239-4a6021d05ff3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0deb9a2-459e-4d44-8239-4a6021d05ff3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -35,35 +35,37 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2em32y39EvFd6Heq2v8Hew4tWyx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "database.data.extractors.current.export.id": "JSON-Groovy.json.groovy",
-    "database.data.extractors.current.id": "JSON-Groovy.json.groovy",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;JSON-Groovy.json.groovy&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;JSON-Groovy.json.groovy&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;mongo&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="`" />
@@ -90,7 +92,9 @@
       <workItem from="1712654267564" duration="10468000" />
       <workItem from="1712737981902" duration="5220000" />
       <workItem from="1713109776876" duration="82000" />
-      <workItem from="1713289472821" duration="5648000" />
+      <workItem from="1713289472821" duration="5707000" />
+      <workItem from="1713296668430" duration="286000" />
+      <workItem from="1713428930483" duration="7950000" />
     </task>
     <task id="LOCAL-00001" summary="les1.1">
       <option name="closed" value="true" />
@@ -100,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712738880747</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="les2.1">
+      <option name="closed" value="true" />
+      <created>1713296618459</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713296618459</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +120,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="les1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="les1.1" />
+    <MESSAGE value="les2.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="les2.1" />
   </component>
 </project>
