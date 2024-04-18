@@ -153,8 +153,59 @@ db.students.aggregate([
 
 db.students.aggregate([
     {
-        $match: {
-            "parents.profession": { $exists: false }
+       $unwind:'$parents'
+    },
+    {
+        $match:{
+            'parents.profession':{$exists:0}
+        }
+    }
+])
+
+db.students.deleteMany({
+    'avgScore':{$lt:2.5}
+})
+
+db.students.updateMany(
+    {'parents.profession':'teacher'},
+    {$set:{avgScore:5}}
+)
+
+db.students.aggregate([
+    {
+        $match:{
+            'parents.profession':'teacher'
+        }
+    }
+])
+// 16) Знайти дітей які вчаться в початковій школі (до 5 класу)
+// і вивчають фізику ( physics )
+// 17) Знайти найуспішніший клас
+
+db.students.aggregate([
+    {
+        $match:{
+            'class':{$lt:5}
+        }
+    },
+    {
+        $match:{
+            'lessons':'physics'
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        $group: {
+            _id: '$class',
+            avgrage: {$avg: '$avgScore'},
+        }
+    },
+    {
+        $group:{
+            _id: 'null',
+            maxClass:{$max:'$avgrage'}
         }
     }
 ])
